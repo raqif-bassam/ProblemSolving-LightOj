@@ -1,0 +1,25 @@
+
+int main() {
+int t,i,n,j,m;
+cin>>m;
+for(j=1;j<=m;j++)
+{
+	printf("Case %d:\n",j);
+	unsigned long long s=0;
+	scanf("%d",&t);
+	for(i=1;i<=t;i++)
+	{
+		char a[10];
+		scanf("%s",&a);
+		//cout<<a<<endl;
+		if(!strcmp(a,"donate"))
+		{
+			scanf("%d",&n);
+			//cout<<n<<endl;
+			s+=n;
+			continue;
+		}
+		if(!strcmp(a,"report"))
+			printf("%llu\n",s);
+	}
+}

@@ -1,0 +1,25 @@
+#include <stdio.h>
+ 
+int main ()
+{
+    int tc, nc=0, count;
+    int A, B, i, sum;
+    scanf ("%d", &tc);
+    while (tc--)
+    {
+        count=0;
+        scanf ("%d%d", &A, &B);
+        for (i=A; i-1<=B; i++)
+        {
+            if (i%3 == 0)
+            {
+                if (i-1<A || i>B)
+                    count++;
+                else
+                    count+=2;
+            }
+        }
+        printf ("Case %d: %d\n", ++nc, count);
+    }
+    return 0;
+}
